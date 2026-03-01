@@ -1,0 +1,6 @@
+\123__.php|0
+\footer.html|1
+\index.html|2
+\left.txt|3
+\right.txt|4
+\top.txt|5
