@@ -244,7 +244,7 @@ if(isset($_POST['sort_ru_dic']) && $_POST['sort_ru_dic'] === 'null'){
 /* 3. Проверяем наличие файла files.txt и, если его нет, выдаем сообщение и кнопку для индексации ИМЕН файлов сайта(за исключением запрещенных)
       Файл files.txt формируется при помощи file_FINDER.php    */
 if(!file_exists(PATH_FILE_NAMES_ALL_FILES)){
-echo '<input src="/LOCAL_only/REDACTOR/img/indexing-files.png" style="background-image: none; vertical-align: middle; margin-left: 15px; width: 41px;" onclick="file_FINDER()" class="buttons_REDACTOR" title="Запустить индексирование ИМЕН всех файлов сайта" alt="Индексировать" type="image"><br/>';
+echo '<input src="/imgs/indexing-files.png" style="background-image: none; vertical-align: middle; margin-left: 15px; width: 41px;" onclick="file_FINDER()" class="buttons_REDACTOR" title="Запустить индексирование ИМЕН всех файлов сайта" alt="Индексировать" type="image"><br/>';
     die('Ошибка: не найден файл с перечнем всех файлов сайта (за исключением запрещенных) <b>'. PATH_FILE_NAMES_ALL_FILES. '</b>. Возможно, требуется сделать индексирование ИМЕН всех файлов сайта. Для этого - нажмите на кнопку.<br/>');
 }
 
@@ -327,9 +327,9 @@ ol { margin: 0; padding: 5px 30px;}
     <div id="tmpID">
         <div style="display: inline-block; margin: 0; background-color: rgb(174, 255, 174); width: 100%">
             <div style="min-height: 40px; padding-left: 2px;">
-                <input src="/LOCAL_only/REDACTOR/img/indexing-files.png" style="background-image: none; vertical-align: middle; margin: 0 0 0 4px; width: 41px; float: right" onclick="file_FINDER()" class="buttons_REDACTOR" title="Запустить индексирование ИМЕН всех файлов сайта. Будет создан сводный файл со списком индексируемых файлов:
+                <input src="/imgs/indexing-files.png" style="background-image: none; vertical-align: middle; margin: 0 0 0 4px; width: 41px; float: right" onclick="file_FINDER()" class="buttons_REDACTOR" title="Запустить индексирование ИМЕН всех файлов сайта. Будет создан сводный файл со списком индексируемых файлов:
 <?php echo realpath(PATH_FILE_NAMES_ALL_FILES); ?>)" alt="Индексировать" type="image"/>
-                <input src="/LOCAL_only/REDACTOR/img/sort1.png" style="background-image: none; vertical-align: middle; margin: 0 0 0 4px; width: 41px; float: right" onclick="ru_dic_SORTER('')" class="buttons_REDACTOR" title="Сортировка словаря. Будет заново создан и ПРОИНДЕКСИРОВАН словарь, отсортированный по алфавиту от А до Я. Старый файл сохранен под именем
+                <input src="/imgs/sort1.png" style="background-image: none; vertical-align: middle; margin: 0 0 0 4px; width: 41px; float: right" onclick="ru_dic_SORTER('')" class="buttons_REDACTOR" title="Сортировка словаря. Будет заново создан и ПРОИНДЕКСИРОВАН словарь, отсортированный по алфавиту от А до Я. Старый файл сохранен под именем
 <?php echo str_replace('\\', '/', $ru_dic_FILE_NAME_saved); ?>" alt="Сортировать" type="image"/>
                 Файл: <span id="file_name" style="font-weight: bold; ">Файл не определен! Возможно, все файлы проиндексированы.</span></div>
             <div style="padding: 2px;">
@@ -343,7 +343,7 @@ ol { margin: 0; padding: 5px 30px;}
 
             <div style="display: inline-block; position: relative">
                 <input id="last_managed_string" placeholder="1..." title="Вставьте индекс-номер файла, если нужно продолжить индексирование именно с этого файла" style="width: 150px;" type="text">
-                <!--<input id="save" src="/LOCAL_only/REDACTOR/img/save_as2.png" style="background-image: none; width: 25px; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Сохранить заданный номер строки (в файле files.txt): с этого номера будет начато/продолжено индексирование файлов сайта" alt="SAVE->" type="image"/>-->
+                <!--<input id="save" src="/imgs/save_as2.png" style="background-image: none; width: 25px; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Сохранить заданный номер строки (в файле files.txt): с этого номера будет начато/продолжено индексирование файлов сайта" alt="SAVE->" type="image"/>-->
                 <!--<div style="display: inline-block; font-size: 90%; font-style: italic; "> </div>-->
             </div>
             <div>
@@ -352,32 +352,32 @@ ol { margin: 0; padding: 5px 30px;}
             </div>
 
             <div style="display: inline-block; position: relative; vertical-align: top; max-width: 100px; text-align: right;">
-            <div style="display: inline-block"><input id="DO_working_stop" src="/LOCAL_only/REDACTOR/img/Close-Cancel.png" onclick="DO_working(false)" style="background-image: none; vertical-align: middle; position: relative; top: -5px; max-width: 41px" class="buttons_REDACTOR" title="Остановить индексирование файлов" alt="Стоп" type="image"/></div>
+            <div style="display: inline-block"><input id="DO_working_stop" src="/imgs/Close-Cancel.png" onclick="DO_working(false)" style="background-image: none; vertical-align: middle; position: relative; top: -5px; max-width: 41px" class="buttons_REDACTOR" title="Остановить индексирование файлов" alt="Стоп" type="image"/></div>
 
-             <div style="display: inline-block"><input id="DO_working" src="/LOCAL_only/REDACTOR/img/go.png" onclick="DO_working(true)" style="background-image: none; vertical-align: middle; position: relative; top: -5px; max-width: 41px" class="buttons_REDACTOR" title="Запуск индексирования СОДЕРЖИМОГО файлов (из списка, содержащегося в файле
+             <div style="display: inline-block"><input id="DO_working" src="/imgs/go.png" onclick="DO_working(true)" style="background-image: none; vertical-align: middle; position: relative; top: -5px; max-width: 41px" class="buttons_REDACTOR" title="Запуск индексирования СОДЕРЖИМОГО файлов (из списка, содержащегося в файле
 <?php echo realpath(PATH_FILE_NAMES_ALL_FILES); ?>)" alt="Запуск" type="image"/></div>
 
-            <div lang="ru" class="hyphens" style=" font-size: 90%; background-color: #AEFFF4; text-align: center">Показать номера НЕпроиндексированных строк:<input src="/LOCAL_only/REDACTOR/img/find.png" style="background-image: none; width: 25px; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Показать номера строк из файла files.txt, которые еще не были проиндексированы" onclick="find_NOT_INDEXED_strings()" alt="FIND->" type="image"/></div>
+            <div lang="ru" class="hyphens" style=" font-size: 90%; background-color: #AEFFF4; text-align: center">Показать номера НЕпроиндексированных строк:<input src="/imgs/find.png" style="background-image: none; width: 25px; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Показать номера строк из файла files.txt, которые еще не были проиндексированы" onclick="find_NOT_INDEXED_strings()" alt="FIND->" type="image"/></div>
             </div>
         </div>
 <p style="display: inline-block">Всего файлов, которые будут индексироваться: <span id="last_index"><?php echo sizeof($ALL_files_Arr); ?></span></p>
-        <input id="Notepad" src="/LOCAL_only/REDACTOR/img/notepad_pp-40.png" style="background-image: none; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Открыть файл со списком индексируемых файлов Notepad++
+        <input id="Notepad" src="/imgs/notepad_pp-40.png" style="background-image: none; vertical-align: middle; margin-left: 15px;" class="buttons_REDACTOR" title="Открыть файл со списком индексируемых файлов Notepad++
 <?php echo realpath(PATH_FILE_NAMES_ALL_FILES); ?>" alt="Открыть файл со списком индексируемых файлов Notepad++" type="image"/>
 
-        <input src="/LOCAL_only/REDACTOR/img/error_log.png" style="background-image: none; vertical-align: middle; margin-left: 15px; float: right; width: 41px" class="buttons_REDACTOR" title="Открыть лог-файл  журнал ошибок" onclick="open_error_log()" alt="Открыть файл ошибок" type="image"/>
+        <input src="/imgs/error_log.png" style="background-image: none; vertical-align: middle; margin-left: 15px; float: right; width: 41px" class="buttons_REDACTOR" title="Открыть лог-файл  журнал ошибок" onclick="open_error_log()" alt="Открыть файл ошибок" type="image"/>
 
 
 <div style="overflow: auto;">
     <div style="float: right; background-color: #74E36D; padding: 15px 0px 0px 30px; margin-top: 20px">
-        <input src="/LOCAL_only/REDACTOR/img/find-files-indexed.png" style="background-image: none; float: right; z-index: 2; vertical-align: middle; width: 41px;" onclick="show_hide_POPUP(['popup0', 'popup1'], null)" class="buttons_REDACTOR" title="Найти файлы по искомым словам" type="image"/>
-        <input id="fuzzy" src="/LOCAL_only/REDACTOR/img/find-files-.png" style="background-image: none; float: right; z-index: 2; vertical-align: middle; height: 20px; width: 20px; margin-top: 21px;" onchange="fuzzy_finding('fuzzy', 'onchange')" class="buttons_REDACTOR" title="Поставьте галочку, чтобы использовать нечеткий поиск" type="checkbox"/>
+        <input src="/imgs/find-files-indexed.png" style="background-image: none; float: right; z-index: 2; vertical-align: middle; width: 41px;" onclick="show_hide_POPUP(['popup0', 'popup1'], null)" class="buttons_REDACTOR" title="Найти файлы по искомым словам" type="image"/>
+        <input id="fuzzy" src="/imgs/find-files-.png" style="background-image: none; float: right; z-index: 2; vertical-align: middle; height: 20px; width: 20px; margin-top: 21px;" onchange="fuzzy_finding('fuzzy', 'onchange')" class="buttons_REDACTOR" title="Поставьте галочку, чтобы использовать нечеткий поиск" type="checkbox"/>
     </div>
     <p style="margin-bottom: 0px;">Общий объем проиндексированных файлов: <span id="total"></span> кБ</p>
 </div>
 
         <div id="tmpID_response"><div></div></div>
 
-        <div style="position: absolute; right: -4px; bottom: -30px;"><div><input src="/LOCAL_only/REDACTOR/img/delete-40_res.png" style="background-image: none; width: 25px" class="buttons_REDACTOR" title="Очистить журнал сообщений (ниже)" onclick="clean_responser('responser')" type="image"/></div></div>
+        <div style="position: absolute; right: -4px; bottom: -30px;"><div><input src="/imgs/delete-40_res.png" style="background-image: none; width: 25px" class="buttons_REDACTOR" title="Очистить журнал сообщений (ниже)" onclick="clean_responser('responser')" type="image"/></div></div>
 
         <div id="popup0">
             <p style=" margin: 0px; overflow: auto; background-color: rgba(0, 137, 254, 0.65); font-size: 14px; line-height: 20px; text-align: left;">
@@ -980,6 +980,9 @@ function start_NotepadPP_working1($file_to_open, $internal_enc, $n, $c){
         die('<p class="error_mes">В результате попытки открытия файла в программе notepad++ возникла ошибка. Вот ее код: '. $exec_res_code .'</p>>');
     }
  }
+
+
+
 
 
 
